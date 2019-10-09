@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>data visualizations</title>
+	<title>Trust Tracker</title>
 	
 	<link rel="stylesheet" href="viz.css" type="text/css"> 
 	<!--<script src="https://d3js.org/d3.v5.min.js"></script>-->
@@ -18,7 +18,7 @@
 	<div>
 		<h1> Headline Trust Tracker </h1>
 		<p id = "intro">
-			While living in China for the past year, I haven't had easy access to western news sources. After reading some Chinese news, I began wondering whether or not media companies across the Pacific operated in similar ways. I wanted to know how subjective each source is and how polarized their language choice is. I targeted a handful of news sources from both the U.S. and China and gathered front page headlines from them over a period of a few months. I used Natural Language Processing (NLP) to rate a given headline on its subjectivity and polarity. Below is a visualization that depicts the data I gathered.
+			While living in China for the past year, I haven't had easy access to western news sources. After reading some Chinese news, I began wondering whether or not media companies across the Pacific operated in similar ways. I wanted to know how subjective each source is and how polarized their language choice is. I targeted a handful of news sources from both the U.S. and China and gathered front page headlines from them over a period of a few months using Beautiful Soup, a python library. I used Natural Language Processing (NLP) to rate a given headline on its subjectivity and polarity. Below is a visualization that depicts the data I gathered.
 		</p>
 
 	</div>
@@ -31,6 +31,10 @@
 	<div>
 		<p id = "outro">
 			This chart shows how polar or subjective the average headline from a given news source is. Polarity measures how positive or negative the sentiment of the speech is (-1 being the most negative and 1 being the most positive). Subjectivity measures how factual the headline is (0 being an indisputable truth, and 1 being an opinion). The small circle located at 0 polarity and 0 subjectivity shows where a completely non-polar non-subjective news source would lie on the graph. Hover over any piece of data to learn more about it. Click on any circle to see all the individual headlines. These values are calculated using the TextBlob NLP Python library. For documentation on how they are calculated, check out <a href = "https://textblob.readthedocs.io/en/dev/"> this link. </a>	
+		</p>
+
+		<p id ="author">
+			Created by <a href = "https://github.com/dbaigel1/"> Daniel Baigel </a>
 		</p>
 
 	</div>
