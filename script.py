@@ -78,14 +78,25 @@ if urlNBC.status_code != 200:
 
 soupNBC = BeautifulSoup(urlNBC.content, 'html.parser')
 
-NBCcontainer = soupNBC.find('article', class_="teaseCard content___3FGvZ")
+try:
+	NBCcontainer = soupNBC.find('article', class_="teaseCard content___3FGvZ")
+	NBCcontainer2 = NBCcontainer.find_all('h2')
+	NBCheadline = NBCcontainer2[1].find('a').get_text()
+except:
+	try:
+		NBCcontainer = soupNBC.find('div', class_="pt7 pb7 mt-auto mb-auto")
+		NBCcontainer2 = NBCcontainer.find_all('h2')
+
+		NBCheadline = NBCcontainer2[1].find('a').get_text()
+	except:
+		sys.exit("Can't find headline tag in Wash Post")
+
+
 #NBCcontainer = soupNBC.find('div', class_="massiveHeadline massiveHeadline___3rr60")
 #NBCcontainer = soupNBC.find('article', class_="teaseCard content___3FGvZ content___FIXYj")
 
-NBCcontainer2 = NBCcontainer.find_all('h2')
 #NBCcontainerAlt2 = NBCcontainerAlt.find_all('h2')
 
-NBCheadline = NBCcontainer2[1].find('a').get_text()
 #NBCheadline = NBCcontainerAlt2[1].find('a').get_text()
 
 nbcBlob = TextBlob(NBCheadline)

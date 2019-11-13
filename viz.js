@@ -979,7 +979,7 @@ dataFile.then(function(data) {
     .text(function(d) {
       return d;
     })
-    .attr("font-family", "Josefin Slab, serif")
+    .attr("font-family", "Source Sans Pro, sans-serif")
     .style("font-size", "18px");
 
   /* axis labels*/
@@ -989,7 +989,7 @@ dataFile.then(function(data) {
     .attr("x", containerWidth / 2)
     .attr("y", containerHeight - 10)
     .style("font-size", "20px")
-    .attr("font-family", "Josefin Slab, serif")
+    .attr("font-family", "Source Sans Pro, sans-serif")
     .text("Polarity");
 
   var yLabel = graph1
@@ -999,7 +999,7 @@ dataFile.then(function(data) {
     .attr("x", -containerHeight / 2)
     .attr("transform", "rotate(-90)")
     .style("font-size", "20px")
-    .attr("font-family", "Josefin Slab, serif")
+    .attr("font-family", "Source Sans Pro, sans-serif")
     .text("Subjectivity");
   /* graph1 title */
   graph1
@@ -1008,9 +1008,9 @@ dataFile.then(function(data) {
     .attr("y", 30)
     .attr("text-anchor", "middle")
     .style("font-size", "36px")
-    .style("font-weight", "bold")
+    //.style("font-weight", "bold")
     .style("text-decoration", "underline")
-    .attr("font-family", "Josefin Slab, serif")
+    .attr("font-family", "Source Sans Pro, sans-serif")
     .text("Polarity vs. Subjectivity");
 });
 
